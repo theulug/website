@@ -72,6 +72,10 @@ ul, ol {
   color: #F06060;
 }
 
+.main-wrapper-wrapper {
+  background-color: white;
+}
+
 .main-wrapper {
   margin: 0 auto;
   max-width: 640px;
@@ -173,4 +177,29 @@ figure {
 .shadowed {
   background: white;
   box-shadow: 0px 2px 2px 1px #E0E0E0;
+}
+
+/**
+ * Navigation bar
+ */
+
+.nav-wrapper {
+  text-align: center;
+  margin-top: 1em;
+}
+
+nav li, nav ul {
+  display: inline;
+  padding: 0;
+  margin: 0;
+}
+nav li a {
+  padding: 1em;
+  border: 1px solid black;
+}
+
+nav li:nth-child(odd) {
+  background-color: 
+}
+nav li:nth-child(even) {
 }
