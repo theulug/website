@@ -5,7 +5,7 @@ here = ulug.root_path
 
 @ulug.route("/")
 def index():
-    return "The ULUG website!"
+    return render_template("home.html")
 
 @ulug.route("/irc")
 def irc():

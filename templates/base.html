@@ -18,11 +18,28 @@
         <span class='logo-u'>u</span>lug
       </h1>
     </header>
+    <nav>
+      <ul>
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a>Schedule</a></li>
+        <li><a>Docs</a>
+          <ul>
+            <li><a>Constitution</a></li>
+            <li><a>Code of Conduct</a></li>
+          </ul>
+        </li>
+        <li><a>Minutes</a></li>
+        <li><a>Contact</a></li>
+        <li><a href="{{ url_for('irc') }}">IRC</a></li>
+      </ul>
+    </nav>
     <div class='main-wrapper'>
       <main class='shadowed'>
         {% block content %}
         {% endblock %}
       </main>
     </div>
+    <footer>
+    </footer>
   </body>
 </html>
