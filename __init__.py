@@ -12,4 +12,4 @@ def irc():
     return render_template("irc.html")
 
 if __name__ == "__main__":
-    ulug.run()
+    ulug.run(debug=True)
