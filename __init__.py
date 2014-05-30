@@ -5,11 +5,15 @@ here = ulug.root_path
 
 @ulug.route("/")
 def index():
-    return render_template("home.html")
+    return render_template("base.html")
 
 @ulug.route("/irc")
 def irc():
     return render_template("irc.html")
+
+@ulug.route("/contact")
+def contact():
+    return render_template("contact.html")
 
 if __name__ == "__main__":
     ulug.run(debug=True)
