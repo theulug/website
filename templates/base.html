@@ -12,7 +12,17 @@
     <link rel='stylesheet' href="{{ url_for('index') }}static/css/style.css" type='text/css'>
   </head>
   <body>
-    {% block content %}
-    {% endblock %}
+    <header class='page-header shadowed'>
+      <h1 class='logo'>
+        <span class='logo-the'>the</span>
+        <span class='logo-u'>u</span>lug
+      </h1>
+    </header>
+    <div class='main-wrapper'>
+      <main class='shadowed'>
+        {% block content %}
+        {% endblock %}
+      </main>
+    </div>
   </body>
 </html>
