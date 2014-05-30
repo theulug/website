@@ -1,0 +1,146 @@
+{% extends "base.html" %}
+{% block content %}
+    <header class='page-header shadowed'>
+      <h1 class='logo'>
+        <span class='logo-the'>the</span>
+        <span class='logo-u'>u</span>lug
+      </h1>
+    </header>
+    <div class='main-wrapper'>
+      <main class='shadowed'>
+        <article class='main-content'>
+          <header class='article-header'>
+            <h1 class='page-title'>irc howto</h1>
+          </header>
+          <aside class='notice'>
+            <p>
+              This is still a rough draft and could use a couple more sections.
+              I'll turn this into a proper guide eventually,
+              but hopefully this should get you started.
+            </p>
+          </aside>
+          <section>
+            <hgroup class='section-title'>
+              <h1>irc and you</h1>
+              <h2>now what can it do?</h2>
+            </hgroup>
+            <p>
+              A few of us hang out in the <a href='http://freenode.net'>freenode</a>
+              IRC network in the
+              <code>#ulug</code> and <code>##uofu</code>
+              channels. If you're new to IRC, but want to join us, read on.
+            </p>
+            <p>
+              <a href='https://en.wikipedia.org/wiki/Internet_Relay_Chat'>IRC</a>
+              is a protocol for chat.
+              With an IRC client,
+              you log into a server where you can chat with other users on that server.
+              People typically chat in rooms called <i>channels,</i>
+              although you can message people directly.
+            </p>
+            <p>
+              Although other forms of instant communication have emerged and started to displace IRC,
+              IRC still remains as a popular communication channel for open source communities.
+            </p>
+          </section>
+          <section>
+            <h1 class='section-title'>irc clients</h1>
+            <p>
+              There are many
+              <a href='http://en.wikipedia.org/wiki/Comparison_of_Internet_Relay_Chat_clients'>clients</a>
+              available for IRC.
+              Some include:
+              <section>
+                <h2 class='list-header'>Cross-platform</h2>
+                <ul>
+                  <li><a href='http://pidgin.im'>Pidgin</a></li>
+                  <li><a href='http://hexchat.github.io'>HexChat</a></li>
+                  <li><a href='https://addons.mozilla.org/en-US/firefox/addon/chatzilla/'>ChatZilla</a></li>
+                </ul>
+              </section>
+              <section>
+                <h2 class='list-header'>Mac</h2>
+                <ul>
+                  <li><a href='http://limechat.net/mac/'>LimeChat</a></li>
+                  <li><a href='http://colloquy.info'>Colloquy</a></li>
+                </ul>
+              </section>
+              <section>
+                <h2 class='list-header'>Terminal Fans</h2>
+                <ul>
+                  <li><a href='http://www.weechat.org'>WeeChat</a></li>
+                  <li><a href='http://www.irssi.org/'>Irssi</a></li>
+                </ul>
+              </section>
+            </p>
+            <p>
+              If you don't wish to install a client,
+              there's always the
+              <a href='http://webchat.freenode.net?channels=%23ulug%2C%23%23uofu'>web</a>
+              client for Freenode.
+          </section>
+          <section>
+            <h1 class='section-title'>web quickstart</h1>
+            <p>
+              If you're using the web
+              <a href='http://webchat.freenode.net?channels=%23ulug%2C%23%23uofu'>web</a>
+              client, simply enter your desired nickname,
+              make sure the channels listed are
+              <code>#ulug</code> and <code>##uofu</code>,
+              fill in the captcha and hit connect.
+            </p>
+          </section>
+          <section>
+            <h1 class='section-title'>register on freenode</h1>
+            <p>
+              Registering your IRC nick on freenode allows you to reserve that nick
+              and use it for identification.
+            </p>
+            <p>
+              First make sure you have set your desired nick.
+            </p>
+            <figure>
+              <code>/nick &lt;your nickname&gt;</code>
+            </figure>
+            <p>
+              Next, message NickServ with the <code>REGISTER</code> command.
+            </p>
+            <figure>
+              <code>
+                /msg NickServ REGISTER &lt;password&gt; &lt;youremail@emailsite.com&gt;
+              </code>
+            </figure>
+            <p>
+              Be sure to use an unique password as you may be authenticating over plaintext.
+            </p>
+            <p>
+              You'll need to use a valid email as you'll be sent a verification email
+              which will be used to complete the registration.
+              In the email will be a random string that you'll message to NickServ.
+            </p>
+            <figure>
+              <code>/msg NickServ VERIFY REGISTER &lt;your nickname&gt; &lt;number and letter code&gt;</code>
+            </figure>
+            <p>
+              Once you're done, you'll have registered your nick with freenode.
+              Remember to now identify with NickServ when you sign on.
+              Most IRC clients can be configured to automatically do this for you.
+              Nicks expire if they haven't been identified within the last ten months.
+              Once expired, another may register it.
+            </p>
+            <figure>
+              <code>/msg NickServ IDENTIFY &lt;nick&gt; &lt;password&gt;</code>
+            </figure>
+            <p>
+              If you sign in to find your registered nick in use by another,
+              you can force them to release it then set your nick to it.
+            </p>
+            <figure>
+              <code>/msg NickServ RELEASE &lt;nick&gt; &lt;password&gt;</code><br> <!-- TODO: convert this to a ul or something -->
+              <code>/nick &lt;your nick&gt;</code>
+            </figure>
+          </section>
+        </article>
+      </main>
+    </div>
+{% endblock %}
