@@ -7,9 +7,9 @@ here = ulug.root_path
 def index():
     return "The ULUG website!"
 
-@ulug.route("/docs")
-def docs():
-    return "Here for documentation"
+@ulug.route("/irc")
+def irc():
+    return render_template("irc.html")
 
 if __name__ == "__main__":
     ulug.run()
