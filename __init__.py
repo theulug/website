@@ -11,6 +11,10 @@ def index():
 def irc():
     return render_template("irc.html")
 
+@ulug.route("/constitution")
+def constitution():
+    return render_template("constitution.html")
+
 @ulug.route("/contact")
 def contact():
     return render_template("contact.html")
