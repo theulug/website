@@ -14,7 +14,7 @@ body {
   color: #505050;
   text-rendering: optimizeLegibility;
 
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 
@@ -95,7 +95,8 @@ figure {
   background: #FAFAFA;
   border: thin dashed #E0E0E0;
 
-  overflow-x: scroll; 
+  overflow-x: auto;
+
   white-space: nowrap;
 }
 
